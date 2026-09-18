@@ -1,0 +1,18 @@
+REAL BROWSER EMULATORS
+
+This website implements a small BASIC subset and a virtual text screen. The projects below emulate real computers.
+
+C64: STIGC.DK
+An emulator with a BASIC editor for sharing and running programs.
+
+APPLE II: APPLE ][JS
+Apple II emulation in JavaScript.
+
+DOS: JS-DOS
+DOS emulation in the browser.
+
+Open READABLE SCREEN / LINKS below this computer for clickable links.
+
+You can also open C64 ONLINE from the disk and press RETURN to visit it.
+
+These are external projects with their own compatibility, files, and policies. They are not bundled into Public Space.

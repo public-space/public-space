@@ -1,0 +1,9 @@
+JOURNAL
+
+A place for game sessions, Linux discoveries, recordings, and things worth remembering.
+
+No entries have been published yet.
+
+The plan is to keep it small: what I tried, what I noticed, and what I might do next. A few sentences and a recording can be enough.
+
+Later entries will appear as their own files on this disk. Search will look through their titles and text.
