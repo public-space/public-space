@@ -1,0 +1,12 @@
+THE PROJECT SHELF
+
+AGADA
+Experiments with sound, image, and perception. Open AGADA for its place on this disk.
+
+FIELD0NOTES
+A separate Markdown notebook and website project. Kept simple so it can be developed by hand.
+
+PUBLIC SPACE
+This computer-shaped website. Its disk and programs are editable files in the repository.
+
+More projects can be added as they take shape.

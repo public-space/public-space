@@ -1,0 +1,13 @@
+PUBLIC SPACE / VERSION 1
+
+A browser-native computer interface built for Donovan Martinez by OpenAI Codex.
+
+C64 Pro Mono font by STYLE, used under its font embedding/software package license. The original font is unmodified.
+
+The screen has 40 columns and 25 rows with C64-style borders, colors, and glyphs. The old RAM message is visual homage, not a real memory benchmark.
+
+The BASIC interpreter is original project code. It does not emulate a 6510 CPU, VIC-II, SID, a disk drive, or Commodore ROMs. It cannot run downloaded binary PRG or D64 files.
+
+The project source follows the repository's existing GNU GPL version 2 license. The font has its own separate license. No warranty. See the repository for source and license terms.
+
+Saved programs stay in your browser. EXPORT downloads their source. The site does not upload your programs.

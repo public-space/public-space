@@ -1,0 +1,7 @@
+AGADA
+
+A space for sound, image, and interactive experiments.
+
+This file reserves a place for project notes, recordings, and links to playable builds.
+
+The original Agada application has not been imported here yet. When a browser build is ready, it can be linked from this file or added as its own item on the disk.

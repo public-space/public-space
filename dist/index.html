@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PUBLIC SPACE — a small computer on the web</title>
+<meta name="description" content="Donovan’s public space. Browse the disk, read the notes, and write a little BASIC.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%237b71d6' d='M0 0h16v16H0z'/%3E%3Cpath fill='%23352b79' d='M2 3h12v10H2z'/%3E%3Cpath fill='%237b71d6' d='M4 9h4v2H4z'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="screen.css"><script type="module" src="computer.js"></script>
+</head><body>
+<main>
+<div id="machine">
+<canvas id="screen" width="384" height="272" tabindex="0" aria-label="Public Space computer screen. Press F1 for files or type HELP and press Enter." aria-describedby="instructions"></canvas>
+</div>
+<div class="controls">
+<div class="keys"><button data-command="MENU">F1 FILES</button><button data-command="HELP">F3 HELP</button><button id="stop">RUN/STOP</button><button id="full">FULL SCREEN</button></div>
+<form id="command-form" autocomplete="off"><label for="command">READY.</label><input id="command" name="command" aria-label="Computer command" placeholder="TYPE HELP OR MENU" spellcheck="false" autocapitalize="off" autocomplete="off" maxlength="240"><button type="submit">RETURN</button></form>
+<p id="instructions">ARROW KEYS + RETURN TO OPEN A FILE. ESC TO GO BACK. YOU CAN ALSO CLICK THE SCREEN.</p>
+</div>
+<details id="readable"><summary>READABLE SCREEN / LINKS</summary><pre id="transcript" aria-live="polite" aria-atomic="true"></pre><div id="links"></div></details>
+<p class="colophon">PUBLIC SPACE · DONOVAN MARTINEZ <span>WEB COMPUTER / BASIC SUBSET</span></p>
+<noscript>This computer needs JavaScript. <a href="feed/index.txt">Read the plain-text edition</a>.</noscript>
+</main>
+</body></html>

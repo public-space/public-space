@@ -1,0 +1,13 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {Basic} from '../dist/basic.js';
+function machine(extra={}){const out=[];return {out,b:new Basic({print:s=>out.push(s),...extra})};}
+test('arithmetic, strings, precedence and no eval',()=>{const {b}=machine();assert.equal(b.expression('2+3*4'),14);assert.equal(b.expression('2^3^2'),512);assert.equal(b.expression('"A"+"B"'),'AB');assert.throws(()=>b.expression('globalThis.alert(1)'));assert.throws(()=>b.expression('1/0'));assert.throws(()=>b.expression('"1"+2'));});
+test('line ordering, replacement, deletion',()=>{const {b}=machine();b.edit('30 END');b.edit('10 PRINT "X"');b.edit('10 PRINT "Y"');b.edit('30');assert.equal(b.list(),'10 PRINT "Y"');});
+test('nested loops and PRINT semicolon',async()=>{const {b,out}=machine();b.load('10 FOR I=1 TO 2\n20 FOR J=3 TO 1 STEP -1\n30 PRINT I;":";J\n40 NEXT J\n50 NEXT I');await b.run();assert.deepEqual(out,['1:3','1:2','1:1','2:3','2:2','2:1']);});
+test('IF owns remaining colon statements, skipped FOR',async()=>{const {b,out}=machine();b.load('10 IF 0 THEN PRINT "NO":PRINT "NO"\n20 FOR I=5 TO 2\n30 PRINT "NO"\n40 NEXT I\n50 IF 1 THEN PRINT "YES":PRINT "ALSO"');await b.run();assert.deepEqual(out,['YES','ALSO']);});
+test('GOSUB RETURN, INPUT string and number',async()=>{let n=0;const {b,out}=machine({input:async()=>['DONOVAN','7'][n++]});b.load('10 INPUT "NAME";N$\n20 INPUT G\n30 GOSUB 100\n40 END\n100 PRINT N$;G\n110 RETURN');await b.run();assert.deepEqual(out,['DONOVAN7']);});
+test('POKE and illegal memory values',async()=>{const writes=[];const {b}=machine({poke:(...args)=>writes.push(args)});await b.run('POKE 53280,0');assert.deepEqual(writes,[[53280,0]]);await assert.rejects(b.run('POKE 70000,0'),/ILLEGAL/);});
+test('step budget prevents an infinite program',async()=>{const {b}=machine();b.load('10 GOTO 10');await assert.rejects(b.run(),/STEP LIMIT/);assert.equal(b.running,false);});
+test('STOP interrupts a running loop and INPUT',async()=>{const {b,out}=machine();b.load('10 GOTO 10');const run=b.run();setTimeout(()=>b.stop(),1);await run;assert.ok(out.at(-1).startsWith('BREAK'));});
+test('invalid program load preserves previous program',()=>{const {b}=machine();b.load('10 END');assert.throws(()=>b.load('nonsense'));assert.equal(b.list(),'10 END');});
+test('sample programs run',async()=>{const {readFile}=await import('node:fs/promises');for(const [name,answer] of [['hello','DONOVAN'],['colors',''],['guess','5']]){const {b,out}=machine({input:async()=>answer});b.load(await readFile(new URL(`../dist/programs/${name}.bas`,import.meta.url),'utf8'));const random=Math.random;Math.random=()=>0.45;try{await b.run();assert.ok(out.length>0);}finally{Math.random=random;}}});

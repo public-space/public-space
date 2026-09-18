@@ -1,0 +1,62 @@
+[
+  {
+    "name": "ABOUT",
+    "title": "ABOUT THIS SPACE",
+    "type": "SEQ",
+    "path": "about.txt"
+  },
+  {
+    "name": "JOURNAL",
+    "title": "NOTES AND RECORDINGS",
+    "type": "SEQ",
+    "path": "journal.txt"
+  },
+  {
+    "name": "PROJECTS",
+    "title": "THE PROJECT SHELF",
+    "type": "SEQ",
+    "path": "projects.txt"
+  },
+  {
+    "name": "AGADA",
+    "title": "SOUND, IMAGE, EXPERIMENT",
+    "type": "SEQ",
+    "path": "agada.txt"
+  },
+  {
+    "name": "HELLO",
+    "title": "YOUR FIRST BASIC PROGRAM",
+    "type": "PRG",
+    "path": "hello.txt"
+  },
+  {
+    "name": "COLORS",
+    "title": "CHANGE THE SCREEN COLORS",
+    "type": "PRG",
+    "path": "colors.txt"
+  },
+  {
+    "name": "GUESS",
+    "title": "A SMALL NUMBER GAME",
+    "type": "PRG",
+    "path": "guess.txt"
+  },
+  {
+    "name": "LINKS",
+    "title": "REAL BROWSER EMULATORS",
+    "type": "SEQ",
+    "path": "links.txt"
+  },
+  {
+    "name": "C64 ONLINE",
+    "title": "C64 BASIC EMULATOR",
+    "type": "URL",
+    "path": "c64-online.txt"
+  },
+  {
+    "name": "CREDITS",
+    "title": "HOW THIS COMPUTER WORKS",
+    "type": "SEQ",
+    "path": "credits.txt"
+  }
+]

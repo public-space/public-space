@@ -1,0 +1,25 @@
+PUBLIC SPACE
+DONOVAN MARTINEZ
+
+Games, music, Linux, writing, and small software experiments.
+
+This site is a place to collect things I make and things I learn along the way.
+
+It opens as a little computer. The pages live on its disk. You can browse, read, search, and write small BASIC programs without leaving the screen.
+
+GETTING AROUND
+
+F1 opens the disk directory.
+Use UP/DOWN and RETURN to open a file.
+Use ESC to return to the directory.
+Type HELP for all the commands.
+
+Try OPEN PROJECTS or SEARCH MUSIC.
+
+PROGRAMMING
+
+Open HELLO, then type RUN.
+Type LIST to see the program.
+Change a numbered line and RUN again.
+
+This is a web computer, not a complete hardware emulator. The LINKS file takes you to real browser emulators.
