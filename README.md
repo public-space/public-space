@@ -4,6 +4,9 @@ Donovan Martinez — music, games, Linux, writing, and small software experiment
 
 This repository contains my **C64-style web computer**: a file browser, pages as disk files, and a small working BASIC interpreter. It is browser-native code, not a full Commodore 64 emulator.
 
+- [Build it yourself: 12-session tutorial](docs/TUTORIAL.md)
+- [How the code works](docs/ARCHITECTURE.md)
+- [Making-of and design decisions](docs/MAKING-OF.md)
 - [Website setup and editing](docs/WEBSITE.md)
 - [BASIC commands and examples](docs/BASIC.md)
 - [Connecting real DOS/C64 clients](docs/RETRO-CLIENTS.md)
